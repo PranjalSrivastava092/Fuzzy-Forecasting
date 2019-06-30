@@ -1,3 +1,7 @@
+import pandas as pd
+import os
+from collections import defaultdict
+
 print("Stock market prediction system \n")
 print("Enter the Closing value of market 3 days ago: ")
 cl2 = int(input())
