@@ -182,5 +182,7 @@ ls_fuzzy = Fuzzy(LS, U)
 
 fuzzy_candlestick = rb_fuzzy+us_fuzzy+ls_fuzzy+CC
 
+Query(fuzzy_candlestick, trend)
+
 
 

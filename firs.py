@@ -105,7 +105,7 @@ def Fuzzy_trend(bias, fuzzy_momentum):
 			return "Neutral"
 		elif(fuzzy_momentum == "VS"):
 			return "Bearish Neutral"
-		elif(future_momentum == "SM"):
+		elif(fuzzy_momentum == "SM"):
 			return "Bearish"
 		elif(fuzzy_momentum == "BG"):
 			return "Very Bearish"
@@ -199,12 +199,11 @@ for i in range(1,299):
 		doc = "NT"
 	else: 
 		doc = "BR"
-
-
+		
 	#creating the document corpus
 	filename = os.getcwd()+ "/documents/file"+doc+".txt"
 	f = open(filename, "a+")
-	f.write("'"+prev_trend + "'' " + fuzzy_candlestick+"\n")
+	f.write("'"+prev_trend + "' " + fuzzy_candlestick+"\n")
 	f.close()
 
 
