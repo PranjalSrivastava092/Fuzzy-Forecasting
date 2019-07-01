@@ -199,11 +199,18 @@ for i in range(1,299):
 		doc = "NT"
 	else: 
 		doc = "BR"
-		
+
+	if(prev_trend == "Very Bullish" or prev_trend == "Extremely Bullish" or prev_trend == "Bullish Neutral" or prev_trend == "Bullish"):
+		prev_trend = "BL"
+	elif(prev_trend == "Neutral"):
+		prev_trend = "NT"
+	else: 
+		prev_trend = "BR"
+
 	#creating the document corpus
 	filename = os.getcwd()+ "/documents/file"+doc+".txt"
 	f = open(filename, "a+")
-	f.write("'"+prev_trend + "' " + fuzzy_candlestick+"\n")
+	f.write(prev_trend+ " " + fuzzy_candlestick+"\n")
 	f.close()
 
 
